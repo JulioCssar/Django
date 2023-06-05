@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-+0sk%@n8)tw30%ftpa$9@04yte-6hgtnqm#klehlya)8eco_lx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "*"
+]
 
 
 # Application definition
@@ -128,7 +130,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import os 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__)) #fazendo vinculação da pasta onde entra as fotos, css e javascript
 STATIC_URL = '/static/'
-
+STATIC_ROOT = 'staticfiles/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
     # '/var/www/static/'
